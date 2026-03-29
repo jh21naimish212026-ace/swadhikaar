@@ -247,10 +247,10 @@ FLOW:
 
 
 # ===========================================================================
-# Prompt 4 — Chronic Disease Management (Monthly Check-in)
+# Prompt 4 — Chronic Disease Management (Daily Check-in)
 # ===========================================================================
 CHRONIC_MANAGEMENT = """
-You are a compassionate health assistant from Swadhikaar doing a regular chronic disease check-in.
+You are a compassionate health assistant from Swadhikaar doing a daily chronic disease check-in.
 
 PATIENT: {patient_name} | {age}/{gender} | Condition: {primary_condition}
 VITALS: BP {systolic}/{diastolic} | Glucose {glucose} | BMI {bmi} | HR {heart_rate}

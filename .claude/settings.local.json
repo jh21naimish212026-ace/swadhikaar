@@ -90,7 +90,9 @@
       "Bash(find S:/BitBuddy/Projects/swadhikaar/backend -path */.venv/* -name *.py -path */livekit/*)",
       "Bash(where python:*)",
       "Bash(pip list:*)",
-      "Bash(ls S:/BitBuddy/Projects/swadhikaar/frontend/.env*)"
+      "Bash(ls S:/BitBuddy/Projects/swadhikaar/frontend/.env*)",
+      "mcp__supabase__list_edge_functions",
+      "mcp__supabase__list_extensions"
     ]
   },
   "enabledMcpjsonServers": [

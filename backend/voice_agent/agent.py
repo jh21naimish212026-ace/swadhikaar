@@ -94,8 +94,8 @@ GREETINGS: dict[str, str] = {
         "Hum Swadhikaar se aapka haal lene ke liye call kar rahe hain."
     ),
     "chronic_management": (
-        "Namaste {name} ji! Yeh aapka monthly health check-in call hai Swadhikaar se. "
-        "Is mahine aap kaisa feel kar rahe hain?"
+        "Namaste {name} ji! Yeh aapka daily health check-in call hai Swadhikaar se. "
+        "Aaj aap kaisa feel kar rahe hain?"
     ),
     "follow_up": (
         "Namaste {name} ji! Yeh Swadhikaar se call hai. "
@@ -528,13 +528,24 @@ class SwadhikaarAgent(VoiceAgent):
         )
 
         # Trigger the agent to speak first using generate_reply().
-        # Unlike say(), this works with Gemini RealtimeModel (no separate TTS needed).
-        # The model will generate the greeting from the CONVERSATION FLOW in the system prompt.
+        # We wrap this in a delayed task because Gemini Realtime API is in preview
+        # and its WebSocket can take a long time to connect on the first turn,
+        # which causes timeouts.
         greeting_template = GREETINGS.get(call_type, GREETINGS["follow_up"])
         greeting = greeting_template.format(name=patient_name)
-        self.session.generate_reply(
-            instructions=f'Baat shuru karo. Pehle yeh greeting bolo: "{greeting}" — phir patient ka jawab suno.'
-        )
+
+        async def delayed_greeting():
+            # Wait a few seconds to let Gemini Realtime API establish its websocket
+            await asyncio.sleep(3.0)
+            try:
+                self.session.generate_reply(
+                    instructions=f'Baat shuru karo. Pehle yeh greeting bolo: "{greeting}" — phir patient ka jawab suno.'
+                )
+            except Exception as e:
+                logger.error("Initial greeting failed due to Gemini timeout: %s", e)
+                # If it times out, the model usually recovers on the next user speech turn
+
+        asyncio.create_task(delayed_greeting())
 
         logger.info(
             "Agent started — room=%s patient=%s call_type=%s",
@@ -901,10 +912,6 @@ class SwadhikaarAgent(VoiceAgent):
                 realtime_actions=self._realtime_actions,
             )
 
-
-# ---------------------------------------------------------------------------
-# Agent entrypoint
-# ---------------------------------------------------------------------------
 
 # ---------------------------------------------------------------------------
 # Agent entrypoint
