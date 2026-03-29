@@ -1,0 +1,791 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Swadhikaar Landing Page -->
+    <title>Swadhikaar — Indic Voice AI Patient Engagement Platform</title>
+    <meta name="description" content="Swadhikaar is the operating system for Indic patient care. Multilingual AI voice follow-ups, FHIR R4/ABDM compliance, automated triage, and human-in-the-loop review — built for SME hospitals in India." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Swadhikaar — Indic Voice AI Patient Engagement Platform" />
+    <meta property="og:description" content="Swadhikaar is the operating system for Indic patient care. Multilingual AI voice follow-ups, FHIR R4/ABDM compliance, automated triage, and human-in-the-loop review — built for SME hospitals in India." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Swadhikaar — Indic Voice AI Patient Engagement Platform" />
+    <meta name="twitter:description" content="Swadhikaar is the operating system for Indic patient care. Multilingual AI voice follow-ups, FHIR R4/ABDM compliance, automated triage, and human-in-the-loop review — built for SME hospitals in India." />
+
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+
+    <!-- Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    />
+
+    <!-- Iconify Icon Web Component -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js"
+      integrity="sha384-GPb5RlngihS9H0z1D137JsvzmeZ7tCpWEF4t5YDoTZyMsPP8S7h7vFDh4XhheU83"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+
+    <!-- ============================================================
+         NAVIGATION
+    ============================================================ -->
+    <nav class="sw-nav">
+      <div class="sw-container sw-nav__inner">
+        <a href="/" class="sw-nav__logo">Swadhikaar</a>
+        <ul class="sw-nav__links">
+          <li><a href="#features">Features</a></li>
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#stakeholders">Who It's For</a></li>
+          <li><a href="#tech">Technology</a></li>
+        </ul>
+        <div class="sw-nav__ctas">
+          <a href="/login" class="sw-btn sw-btn--ghost">Log In</a>
+          <a href="/login" class="sw-btn sw-btn--primary">Try Voice Agent</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ============================================================
+         HERO
+    ============================================================ -->
+    <section class="sw-hero">
+      <div class="sw-container">
+        <div class="sw-hero__badge">Built for HackMatrix 2.0 — IIT Patna &bull; Jilo Health PS-3</div>
+        <h1 class="sw-hero__headline">The Operating System for Indic Patient Care.</h1>
+        <p class="sw-hero__subheadline">
+          Automated multilingual voice AI follow-ups in Hindi, English, Bhojpuri &amp; Maithili.
+          FHIR R4/ABDM-compliant structured records. Real-time triage escalation.
+          Human-in-the-loop doctor review. All in one platform — for India's SME hospitals.
+        </p>
+        <div class="sw-hero__actions">
+          <a href="/login" class="sw-btn sw-btn--primary sw-btn--lg">Try the Live Voice Agent</a>
+          <a href="/login" class="sw-btn sw-btn--ghost sw-btn--lg">Go to Dashboard</a>
+        </div>
+        <div class="sw-hero__stack-note">
+          Powered by Gemini 2.0 Flash (Native Audio) &bull; LiveKit WebRTC &bull; Supabase &bull; ABDM FHIR R4
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SOCIAL PROOF / KEY NUMBERS
+    ============================================================ -->
+    <section class="sw-stats">
+      <div class="sw-container sw-stats__grid">
+        <div class="sw-stats__item">
+          <span class="sw-stats__number">5+</span>
+          <span class="sw-stats__label">Indic Languages Supported</span>
+        </div>
+        <div class="sw-stats__item">
+          <span class="sw-stats__number">~$0.003</span>
+          <span class="sw-stats__label">Per Voice Follow-up Call</span>
+        </div>
+        <div class="sw-stats__item">
+          <span class="sw-stats__number">3-Level</span>
+          <span class="sw-stats__label">Automated Triage Escalation</span>
+        </div>
+        <div class="sw-stats__item">
+          <span class="sw-stats__number">ABDM</span>
+          <span class="sw-stats__label">FHIR R4 Compliant Output</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         FEATURES
+    ============================================================ -->
+    <section class="sw-features" id="features">
+      <div class="sw-container">
+        <h2 class="sw-section__title">Everything a hospital needs to scale patient follow-up</h2>
+        <p class="sw-section__subtitle">
+          From health camp data ingestion to structured FHIR records — fully automated, multilingual, and compliant.
+        </p>
+
+        <div class="sw-features__grid">
+
+          <div class="sw-feature-card">
+            <div class="sw-feature-card__icon">
+              <iconify-icon icon="mdi:microphone-outline"></iconify-icon>
+            </div>
+            <h3 class="sw-feature-card__title">Indic Voice AI Follow-ups</h3>
+            <p class="sw-feature-card__desc">
+              Automated outbound voice calls in Hindi, English, Bhojpuri, and Maithili — with natural
+              Hindi+English code-switching. Powered by Gemini 2.0 Flash native audio (STT + LLM + TTS in one model).
+              Runs in-browser via LiveKit WebRTC for demo; production-ready via SIP/Twilio telephony bridge.
+            </p>
+          </div>
+
+          <div class="sw-feature-card">
+            <div class="sw-feature-card__icon">
+              <iconify-icon icon="mdi:file-document-outline"></iconify-icon>
+            </div>
+            <h3 class="sw-feature-card__title">Automatic FHIR R4 / ABDM Records</h3>
+            <p class="sw-feature-card__desc">
+              Every voice interaction auto-generates ABDM-compliant FHIR R4 resources — OPD Consultation Notes,
+              Diagnostic Reports, Prescription Bundles, AllergyIntolerance records — coded with SNOMED CT and LOINC.
+              Indian brand-name drugs (e.g., Crocin) are automatically mapped to INN + SNOMED codes.
+            </p>
+          </div>
+
+          <div class="sw-feature-card">
+            <div class="sw-feature-card__icon">
+              <iconify-icon icon="mdi:alert-circle-outline"></iconify-icon>
+            </div>
+            <h3 class="sw-feature-card__title">3-Level Triage &amp; Escalation</h3>
+            <p class="sw-feature-card__desc">
+              Voice AI detects severity in real time. Level 1 (critical) immediately guides the patient to call 108
+              or go to the ER and fires all alerts. Level 2 sends an SMS + Supabase Realtime dashboard alert to the
+              care coordinator within one hour. Level 3 logs and queues for the next scheduled follow-up.
+            </p>
+          </div>
+
+          <div class="sw-feature-card">
+            <div class="sw-feature-card__icon">
+              <iconify-icon icon="mdi:account-check-outline"></iconify-icon>
+            </div>
+            <h3 class="sw-feature-card__title">Human-in-the-Loop Doctor Review</h3>
+            <p class="sw-feature-card__desc">
+              AI-extracted symptoms, medications, and FHIR resources land in the doctor's review queue.
+              Doctors Approve, Correct, or Reject each extraction. Corrections are stored and shown in the
+              admin accuracy dashboard — creating a feedback loop that improves the AI over time.
+            </p>
+          </div>
+
+          <div class="sw-feature-card">
+            <div class="sw-feature-card__icon">
+              <iconify-icon icon="mdi:shield-check-outline"></iconify-icon>
+            </div>
+            <h3 class="sw-feature-card__title">DPDP Act 2023 &amp; ABDM Consent</h3>
+            <p class="sw-feature-card__desc">
+              Full 5-step ABDM consent flow. Verbal consent recorded and timestamped before every call.
+              Patients can view, revoke, or request deletion of their data from the patient portal.
+              Granular consent management and audit logs for every data access event.
+            </p>
+          </div>
+
+          <div class="sw-feature-card">
+            <div class="sw-feature-card__icon">
+              <iconify-icon icon="mdi:chart-bar"></iconify-icon>
+            </div>
+            <h3 class="sw-feature-card__title">Camp-Wise Analytics &amp; Workflow Builder</h3>
+            <p class="sw-feature-card__desc">
+              Admin dashboard shows risk distribution, camp-wise breakdowns (Gandhi Maidan, Digha Slum,
+              Aashrya Old Age Home, Disha Deaddiction Center), and AI accuracy metrics. Build and manage
+              follow-up workflows (Screening&rarr;OPD, Post-Discharge, Chronic Monthly) without writing code.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         HOW IT WORKS
+    ============================================================ -->
+    <section class="sw-how" id="how-it-works">
+      <div class="sw-container">
+        <h2 class="sw-section__title">From health camp data to structured clinical records — automatically</h2>
+
+        <div class="sw-how__steps">
+
+          <div class="sw-how__step">
+            <div class="sw-how__step-num">01</div>
+            <div class="sw-how__step-content">
+              <h3>Ingest Health Camp Data</h3>
+              <p>Upload CSV data from any health camp. Risk scores (cardiac, diabetic, hypertension) are auto-computed.
+                 HIGH-risk patients are queued for immediate voice follow-up; MODERATE for 48-hour call; LOW for health-tip reminder.</p>
+            </div>
+          </div>
+
+          <div class="sw-how__step">
+            <div class="sw-how__step-num">02</div>
+            <div class="sw-how__step-content">
+              <h3>AI Places a Voice Call in the Patient's Language</h3>
+              <p>Gemini 2.0 Flash handles listening, understanding, and responding — all natively in one model.
+                 No separate STT/TTS pipeline needed. The AI adapts tone and speed — slower and empathetic for elderly patients at
+                 Aashrya Old Age Home, direct and simplified for Digha Slum residents.</p>
+            </div>
+          </div>
+
+          <div class="sw-how__step">
+            <div class="sw-how__step-num">03</div>
+            <div class="sw-how__step-content">
+              <h3>Structured Extraction &amp; Triage</h3>
+              <p>Every symptom, medication, reading, and allergy is extracted as a FHIR R4 resource with SNOMED/LOINC codes.
+                 Severity is assessed in real time. If escalation is needed, the care coordinator's dashboard lights up
+                 via Supabase Realtime — no polling, no delay.</p>
+            </div>
+          </div>
+
+          <div class="sw-how__step">
+            <div class="sw-how__step-num">04</div>
+            <div class="sw-how__step-content">
+              <h3>Doctor Reviews &amp; Approves</h3>
+              <p>AI extractions appear in the doctor's queue with the full call transcript. One click to Approve confirms the
+                 FHIR record. Correct lets the doctor fix a wrong extraction (e.g., headache &rarr; migraine with the right SNOMED code).
+                 Reject discards a bad extraction. All actions feed the improvement loop.</p>
+            </div>
+          </div>
+
+          <div class="sw-how__step">
+            <div class="sw-how__step-num">05</div>
+            <div class="sw-how__step-content">
+              <h3>Patient Sees Their Own Health Record</h3>
+              <p>The patient's portal shows vitals, recent call summaries, upcoming scheduled calls, and FHIR-linked health reports.
+                 They can manage DPDP consent, revoke data sharing, or download their records — aligned with the ABDM PHR standard.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         STAKEHOLDERS / WHO IT'S FOR
+    ============================================================ -->
+    <section class="sw-stakeholders" id="stakeholders">
+      <div class="sw-container">
+        <h2 class="sw-section__title">Built for every role in the hospital ecosystem</h2>
+
+        <div class="sw-stakeholders__grid">
+
+          <div class="sw-stakeholder-card">
+            <h3 class="sw-stakeholder-card__role">Patients</h3>
+            <p class="sw-stakeholder-card__desc">
+              Post-discharge patients, chronic care patients, and health-camp attendees receive automated
+              voice check-ins in their own language. No app to install — just answer the phone call. Access
+              your health records, call history, consent status, and FHIR reports through the patient portal.
+            </p>
+            <a href="/login?role=patient" class="sw-btn sw-btn--outline">Patient Portal &rarr;</a>
+          </div>
+
+          <div class="sw-stakeholder-card">
+            <h3 class="sw-stakeholder-card__role">Doctors</h3>
+            <p class="sw-stakeholder-card__desc">
+              See only what matters. Your escalation queue surfaces urgent cases — severe chest pain,
+              BP spikes, missed medications — with the full voice transcript and AI-extracted FHIR data.
+              Approve, correct, or reject AI extractions with one click. No manual data entry required.
+            </p>
+            <a href="/login?role=doctor" class="sw-btn sw-btn--outline">Doctor Portal &rarr;</a>
+          </div>
+
+          <div class="sw-stakeholder-card">
+            <h3 class="sw-stakeholder-card__role">Admins &amp; Care Coordinators</h3>
+            <p class="sw-stakeholder-card__desc">
+              Full control. Manage patient rosters, build follow-up workflows, monitor camp-wise analytics,
+              export ABDM FHIR bundles, track AI accuracy over time, and manage DPDP consent for the entire
+              patient population — all from a single dashboard.
+            </p>
+            <a href="/login?role=admin" class="sw-btn sw-btn--outline">Admin Dashboard &rarr;</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         TECH STACK
+    ============================================================ -->
+    <section class="sw-tech" id="tech">
+      <div class="sw-container">
+        <h2 class="sw-section__title">Transparent by design — every tool, documented</h2>
+        <p class="sw-section__subtitle">Open-source and government-backed wherever possible. Free-tier first.</p>
+
+        <div class="sw-tech__grid">
+          <div class="sw-tech__item">
+            <span class="sw-tech__label">Voice STT / LLM / TTS</span>
+            <span class="sw-tech__value">Gemini 2.0 Flash — Native Audio (single model)</span>
+          </div>
+          <div class="sw-tech__item">
+            <span class="sw-tech__label">LLM — Conversation &amp; Extraction</span>
+            <span class="sw-tech__value">Gemini 2.0 Flash (free tier)</span>
+          </div>
+          <div class="sw-tech__item">
+            <span class="sw-tech__label">Risk Prediction</span>
+            <span class="sw-tech__value">scikit-learn (RandomForest, health camp data)</span>
+          </div>
+          <div class="sw-tech__item">
+            <span class="sw-tech__label">Voice Infrastructure</span>
+            <span class="sw-tech__value">LiveKit Agents SDK (WebRTC / SIP)</span>
+          </div>
+          <div class="sw-tech__item">
+            <span class="sw-tech__label">Backend — Auth, DB, Realtime, Storage</span>
+            <span class="sw-tech__value">Supabase (mandatory)</span>
+          </div>
+          <div class="sw-tech__item">
+            <span class="sw-tech__label">Voice Orchestration</span>
+            <span class="sw-tech__value">FastAPI (Python)</span>
+          </div>
+          <div class="sw-tech__item">
+            <span class="sw-tech__label">Frontend</span>
+            <span class="sw-tech__value">Next.js + shadcn/ui + Tailwind CSS</span>
+          </div>
+          <div class="sw-tech__item">
+            <span class="sw-tech__label">FHIR Validation</span>
+            <span class="sw-tech__value">fhir.resources (Python), ABDM R4 Profiles</span>
+          </div>
+          <div class="sw-tech__item">
+            <span class="sw-tech__label">Medical Terminology</span>
+            <span class="sw-tech__value">SNOMED CT + LOINC</span>
+          </div>
+          <div class="sw-tech__item">
+            <span class="sw-tech__label">Cost per Call</span>
+            <span class="sw-tech__value">~$0.003 (Gemini Flash free tier + LiveKit free tier)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CTA / DEMO SECTION
+    ============================================================ -->
+    <section class="sw-cta-section">
+      <div class="sw-container sw-cta-section__inner">
+        <h2 class="sw-cta-section__title">See it live — talk to the AI in Hindi</h2>
+        <p class="sw-cta-section__subtitle">
+          Open the voice agent demo in your browser. No phone number needed.
+          Watch the doctor dashboard update in real time as you speak.
+        </p>
+        <div class="sw-cta-section__actions">
+          <a href="/login" class="sw-btn sw-btn--primary sw-btn--lg">Launch Voice Agent Demo</a>
+          <a href="/patient/dashboard" class="sw-btn sw-btn--ghost sw-btn--lg">View Patient Portal</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         FOOTER
+    ============================================================ -->
+    <footer class="sw-footer">
+      <div class="sw-container sw-footer__inner">
+        <div class="sw-footer__brand">
+          <span class="sw-footer__logo">Swadhikaar</span>
+          <span class="sw-footer__tagline">Indic Voice AI Patient Engagement Platform</span>
+          <span class="sw-footer__event">HackMatrix 2.0 &bull; IIT Patna &bull; Jilo Health (PS-3)</span>
+        </div>
+        <nav class="sw-footer__links">
+          <a href="/login">Log In</a>
+          <a href="/patient/dashboard">Patient Portal</a>
+          <a href="/doctor/dashboard">Doctor Portal</a>
+          <a href="/admin/dashboard">Admin Dashboard</a>
+          <a href="/login">Voice Agent Demo</a>
+        </nav>
+        <p class="sw-footer__legal">
+          DPDP Act 2023 compliant &bull; ABDM / FHIR R4 aligned &bull; Data hosted on Supabase (India region)
+        </p>
+      </div>
+    </footer>
+
+    <!-- ============================================================
+         INLINE STYLES — self-contained landing page layout
+    ============================================================ -->
+    <style>
+      /* ---- Reset & Base ---- */
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      html { scroll-behavior: smooth; }
+      body {
+        font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        background: #0a0f1e;
+        color: #e8eaf0;
+        line-height: 1.6;
+      }
+      a { color: inherit; text-decoration: none; }
+      ul { list-style: none; }
+
+      /* ---- Layout ---- */
+      .sw-container {
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+      .sw-section__title {
+        font-size: clamp(1.6rem, 3vw, 2.4rem);
+        font-weight: 700;
+        text-align: center;
+        color: #fff;
+        margin-bottom: 12px;
+      }
+      .sw-section__subtitle {
+        font-size: 1.05rem;
+        text-align: center;
+        color: #8b92a5;
+        max-width: 680px;
+        margin: 0 auto 56px;
+      }
+
+      /* ---- Nav ---- */
+      .sw-nav {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background: rgba(10, 15, 30, 0.92);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid rgba(255,255,255,0.07);
+        padding: 0 24px;
+      }
+      .sw-nav__inner {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+        height: 64px;
+      }
+      .sw-nav__logo {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: #fff;
+        letter-spacing: -0.5px;
+        flex-shrink: 0;
+      }
+      .sw-nav__links {
+        display: flex;
+        gap: 28px;
+        flex: 1;
+      }
+      .sw-nav__links a {
+        font-size: 0.9rem;
+        color: #8b92a5;
+        transition: color 0.2s;
+      }
+      .sw-nav__links a:hover { color: #fff; }
+      .sw-nav__ctas { display: flex; gap: 12px; flex-shrink: 0; }
+
+      /* ---- Buttons ---- */
+      .sw-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 10px 22px;
+        border-radius: 8px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.2s;
+        border: none;
+        white-space: nowrap;
+      }
+      .sw-btn--primary {
+        background: #4f46e5;
+        color: #fff;
+      }
+      .sw-btn--primary:hover { background: #4338ca; }
+      .sw-btn--ghost {
+        background: transparent;
+        color: #c7cad6;
+        border: 1px solid rgba(255,255,255,0.15);
+      }
+      .sw-btn--ghost:hover { background: rgba(255,255,255,0.06); color: #fff; }
+      .sw-btn--outline {
+        background: transparent;
+        color: #4f46e5;
+        border: 1px solid #4f46e5;
+        font-size: 0.88rem;
+      }
+      .sw-btn--outline:hover { background: #4f46e5; color: #fff; }
+      .sw-btn--lg { padding: 14px 32px; font-size: 1rem; }
+
+      /* ---- Hero ---- */
+      .sw-hero {
+        padding: 100px 0 80px;
+        text-align: center;
+        background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(79,70,229,0.22) 0%, transparent 70%);
+      }
+      .sw-hero__badge {
+        display: inline-block;
+        font-size: 0.78rem;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        color: #a5b4fc;
+        background: rgba(79,70,229,0.15);
+        border: 1px solid rgba(99,91,255,0.3);
+        border-radius: 100px;
+        padding: 6px 18px;
+        margin-bottom: 28px;
+        text-transform: uppercase;
+      }
+      .sw-hero__headline {
+        font-size: clamp(2.4rem, 5vw, 4rem);
+        font-weight: 800;
+        color: #fff;
+        letter-spacing: -1.5px;
+        line-height: 1.1;
+        max-width: 820px;
+        margin: 0 auto 24px;
+      }
+      .sw-hero__subheadline {
+        font-size: clamp(1rem, 2vw, 1.2rem);
+        color: #8b92a5;
+        max-width: 680px;
+        margin: 0 auto 40px;
+        line-height: 1.7;
+      }
+      .sw-hero__actions { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+      .sw-hero__stack-note {
+        margin-top: 40px;
+        font-size: 0.8rem;
+        color: #555e78;
+        letter-spacing: 0.02em;
+      }
+
+      /* ---- Stats ---- */
+      .sw-stats {
+        padding: 48px 0;
+        border-top: 1px solid rgba(255,255,255,0.06);
+        border-bottom: 1px solid rgba(255,255,255,0.06);
+      }
+      .sw-stats__grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+        text-align: center;
+      }
+      .sw-stats__number {
+        display: block;
+        font-size: 2rem;
+        font-weight: 800;
+        color: #a5b4fc;
+      }
+      .sw-stats__label {
+        display: block;
+        font-size: 0.82rem;
+        color: #6b7280;
+        margin-top: 6px;
+      }
+
+      /* ---- Features ---- */
+      .sw-features {
+        padding: 96px 0;
+        background: linear-gradient(180deg, transparent, rgba(79,70,229,0.04) 50%, transparent);
+      }
+      .sw-features__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+      }
+      .sw-feature-card {
+        background: rgba(255,255,255,0.03);
+        border: 1px solid rgba(255,255,255,0.07);
+        border-radius: 16px;
+        padding: 32px 28px;
+        transition: border-color 0.2s, background 0.2s;
+      }
+      .sw-feature-card:hover {
+        border-color: rgba(79,70,229,0.4);
+        background: rgba(79,70,229,0.06);
+      }
+      .sw-feature-card__icon {
+        font-size: 1.8rem;
+        color: #6366f1;
+        margin-bottom: 18px;
+      }
+      .sw-feature-card__title {
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 12px;
+      }
+      .sw-feature-card__desc {
+        font-size: 0.88rem;
+        color: #8b92a5;
+        line-height: 1.7;
+      }
+
+      /* ---- How It Works ---- */
+      .sw-how {
+        padding: 96px 0;
+        background: rgba(255,255,255,0.01);
+      }
+      .sw-how__steps {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        margin-top: 56px;
+        max-width: 820px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .sw-how__step {
+        display: flex;
+        gap: 32px;
+        padding: 36px 0;
+        border-bottom: 1px solid rgba(255,255,255,0.06);
+      }
+      .sw-how__step:last-child { border-bottom: none; }
+      .sw-how__step-num {
+        font-size: 2.5rem;
+        font-weight: 800;
+        color: rgba(79,70,229,0.3);
+        flex-shrink: 0;
+        width: 64px;
+        line-height: 1;
+        padding-top: 4px;
+      }
+      .sw-how__step-content h3 {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 10px;
+      }
+      .sw-how__step-content p {
+        font-size: 0.9rem;
+        color: #8b92a5;
+        line-height: 1.75;
+      }
+
+      /* ---- Stakeholders ---- */
+      .sw-stakeholders { padding: 96px 0; }
+      .sw-stakeholders__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        margin-top: 56px;
+      }
+      .sw-stakeholder-card {
+        background: rgba(255,255,255,0.03);
+        border: 1px solid rgba(255,255,255,0.07);
+        border-radius: 16px;
+        padding: 36px 28px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+      .sw-stakeholder-card__role {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: #a5b4fc;
+      }
+      .sw-stakeholder-card__desc {
+        font-size: 0.88rem;
+        color: #8b92a5;
+        line-height: 1.7;
+        flex: 1;
+      }
+
+      /* ---- Tech Stack ---- */
+      .sw-tech {
+        padding: 96px 0;
+        background: linear-gradient(180deg, transparent, rgba(79,70,229,0.04) 50%, transparent);
+      }
+      .sw-tech__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0;
+        max-width: 820px;
+        margin: 56px auto 0;
+        border: 1px solid rgba(255,255,255,0.07);
+        border-radius: 16px;
+        overflow: hidden;
+      }
+      .sw-tech__item {
+        padding: 18px 24px;
+        border-bottom: 1px solid rgba(255,255,255,0.06);
+        border-right: 1px solid rgba(255,255,255,0.06);
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+      .sw-tech__item:nth-child(even) { border-right: none; }
+      .sw-tech__label {
+        font-size: 0.76rem;
+        color: #555e78;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+      }
+      .sw-tech__value {
+        font-size: 0.9rem;
+        color: #e8eaf0;
+        font-weight: 500;
+      }
+
+      /* ---- CTA Section ---- */
+      .sw-cta-section {
+        padding: 96px 0;
+        background: radial-gradient(ellipse 70% 80% at 50% 50%, rgba(79,70,229,0.18) 0%, transparent 70%);
+      }
+      .sw-cta-section__inner { text-align: center; }
+      .sw-cta-section__title {
+        font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+        font-weight: 800;
+        color: #fff;
+        margin-bottom: 16px;
+        letter-spacing: -1px;
+      }
+      .sw-cta-section__subtitle {
+        font-size: 1rem;
+        color: #8b92a5;
+        max-width: 560px;
+        margin: 0 auto 40px;
+      }
+      .sw-cta-section__actions { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+
+      /* ---- Footer ---- */
+      .sw-footer {
+        padding: 48px 0;
+        border-top: 1px solid rgba(255,255,255,0.07);
+      }
+      .sw-footer__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        text-align: center;
+      }
+      .sw-footer__logo {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: #fff;
+      }
+      .sw-footer__tagline {
+        display: block;
+        font-size: 0.84rem;
+        color: #6b7280;
+        margin-top: 4px;
+      }
+      .sw-footer__event {
+        display: block;
+        font-size: 0.78rem;
+        color: #4b5563;
+        margin-top: 4px;
+      }
+      .sw-footer__links {
+        display: flex;
+        gap: 24px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .sw-footer__links a {
+        font-size: 0.85rem;
+        color: #6b7280;
+        transition: color 0.2s;
+      }
+      .sw-footer__links a:hover { color: #fff; }
+      .sw-footer__legal {
+        font-size: 0.76rem;
+        color: #374151;
+      }
+
+      /* ---- Responsive ---- */
+      @media (max-width: 1024px) {
+        .sw-features__grid { grid-template-columns: repeat(2, 1fr); }
+      }
+      @media (max-width: 768px) {
+        .sw-nav__links { display: none; }
+        .sw-stats__grid { grid-template-columns: repeat(2, 1fr); }
+        .sw-features__grid { grid-template-columns: 1fr; }
+        .sw-stakeholders__grid { grid-template-columns: 1fr; }
+        .sw-tech__grid { grid-template-columns: 1fr; }
+        .sw-tech__item { border-right: none; }
+        .sw-hero__actions { flex-direction: column; align-items: center; }
+      }
+    </style>
+
+  </body>
+</html>
